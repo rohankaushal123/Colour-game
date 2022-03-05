@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color game</title>
+    <style>
+        body {
+            background-color: #202020;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 62.5%;
+            margin: 0;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 20px;
+
+        }
+
+        .square {
+            width: 30%;
+            background-color: rgb(0, 0, 0);
+            padding-bottom: 30%;
+            float: left;
+            margin: 1.66%;
+            transition: background .5s;
+            -webkit-transition: background .5s;
+            -moz-transition: background .5s;
+        }
+
+        .square:hover {
+            opacity: 0.5;
+        }
+
+        h1 {
+            color: white;
+            background-color: #72e5f1;
+            font-size: 3.5em;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        #color-display {
+            display: block;
+            font-size: 2em;
+        }
+
+        #stripe {
+            background: white;
+            height: 30px;
+            text-align: center;
+            color: black;
+        }
+
+        #message {
+            text-transform: uppercase;
+            color: #2C8E99;
+            font-size: 1.5em;
+            display: inline-block;
+            width: 20%;
+        }
+
+        button {
+            outline: none;
+            color: #2C8E99;
+            font-family: "Raleway", Sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            background-color: white;
+            height: 100%;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+
+        }
+
+        button:hover {
+            background-color: #2C8E99;
+            color: white;
+        }
+
+        .selected {
+            background-color: #2C8E99;
+            color: white;
+        }
+
+        .square {
+            border-radius: 20%;
+        }
+
+        * {
+            border: 0px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Great <span id="color-display">RGB</span> Guessing Game</h1>
+    <div id="stripe">
+        <button id="reset">New Colors</button>
+        <span id="message"></span>
+        <button class="mode">Easy</button>
+        <button class="mode selected">Hard</button>
+    </div>
+    <div id="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
